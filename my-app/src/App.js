@@ -1,8 +1,9 @@
+import HeaderPage from './components/HeaderPage/HeaderPage';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <HeaderPage />
     </div>
   );
 }
