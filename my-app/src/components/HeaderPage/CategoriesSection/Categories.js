@@ -1,5 +1,6 @@
 import React from 'react';
 import './Categories.css';
+import { useDispatch } from 'react-redux';
 import dress from '../../../assets/images/dress.svg';
 import tees from '../../../assets/images/tees.svg';
 import swimwear from '../../../assets/images/swimwear.svg';
@@ -8,6 +9,9 @@ import tops from '../../../assets/images/tops.svg';
 import beauty from '../../../assets/images/beauty.svg';
 
 const Categories = () => {
+  const dispatch = useDispatch();
+  const slide = () => {};
+
   return (
     <div className="categories">
       <h2>
