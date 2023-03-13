@@ -29,7 +29,7 @@
 }
 
 .category > div {
-  margin-top: calc(166 * 100vw / var(--width_before_breakpoint));
+  margin-top: calc(337 * 100vw / var(--width_before_breakpoint));
   width: calc(2492 * 100vw / var(--width_before_breakpoint));
   display: flex;
   flex-direction: column;
@@ -40,7 +40,6 @@
 }
 
 .category > p {
-  margin-bottom: calc(166 * 100vw / var(--width_before_breakpoint));
   width: calc(480 * 100vw / var(--width_before_breakpoint));
   height: calc(100 * 100vw / var(--width_before_breakpoint));
   font-size: calc(40 * 100vw / var(--width_before_breakpoint));
@@ -53,7 +52,6 @@
 }
 
 .category > div > div {
-  margin-top: calc(77 * 100vw / var(--width_before_breakpoint));
   width: calc(2492 * 100vw / var(--width_before_breakpoint));
   display: flex;
   flex-wrap: wrap;
@@ -89,34 +87,40 @@
   font-weight: 700;
 }
 
+.not_found {
+  width: 100%;
+  text-align: center;
+  font-size: calc(48 * 100vw / var(--width_before_breakpoint));
+}
+
 @media screen and (max-width: 850px) {
   .category {
     width: 100%;
+    height: calc(2670 * 100vw / var(--width_after_breakpoint));
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .category > h3 {
-    margin-top: calc(180 * 100vw / var(--width_after_breakpoint));
-    font-size: calc(68 * 100vw / var(--width_after_breakpoint));
+    margin-top: calc(82 * 100vw / var(--width_after_breakpoint));
+    font-size: calc(64 * 100vw / var(--width_after_breakpoint));
     font-weight: 500;
     text-align: center;
   }
-  
+
   .category > div {
-    margin-top: calc(27 * 100vw / var(--width_after_breakpoint));
-    width: calc(745 * 100vw / var(--width_after_breakpoint));
-    height: calc(479 * 100vw / var(--width_after_breakpoint));
+    margin-top: calc(242 * 100vw / var(--width_after_breakpoint));
+    width: calc(748 * 100vw / var(--width_after_breakpoint));
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: absolute;
+    z-index: 1;
     overflow: hidden;
   }
-  
+
   .category > p {
-    margin-top: calc(42 * 100vw / var(--width_after_breakpoint));
-    margin-bottom: calc(80 * 100vw / var(--width_after_breakpoint));
     width: calc(440 * 100vw / var(--width_after_breakpoint));
     height: calc(80 * 100vw / var(--width_after_breakpoint));
     font-size: calc(28 * 100vw / var(--width_after_breakpoint));
@@ -124,44 +128,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: 1;
   }
-  
+
   .category > div > div {
-    margin-top: calc(80 * 100vw / var(--width_after_breakpoint));
-    width: calc(745 * 100vw / var(--width_after_breakpoint));
+    width: calc(748 * 100vw / var(--width_after_breakpoint));
     display: flex;
     flex-wrap: wrap;
-    transition: all ease 0.4s;
   }
-  
+
   .category > div > div > div {
-    margin-top: calc(27 * 100vw / var(--width_after_breakpoint));
+    margin-top: calc(14 * 100vw / var(--width_after_breakpoint));
     width: calc(359 * 100vw / var(--width_after_breakpoint));
     height: calc(528 * 100vw / var(--width_after_breakpoint));
-    margin-right: calc(10 * 100vw / var(--width_after_breakpoint));
+    margin-right: calc(14 * 100vw / var(--width_after_breakpoint));
   }
-  
+
   .category > div > div > div > span {
     position: absolute;
     width: calc(37 * 100vw / var(--width_after_breakpoint));
     height: calc(33 * 100vw / var(--width_after_breakpoint));
-    margin-left: calc(307 * 100vw / var(--width_after_breakpoint));
+    margin-left: calc(310 * 100vw / var(--width_after_breakpoint));
     margin-top: calc(14 * 100vw / var(--width_after_breakpoint));
   }
-  
+
   .category > div > div > div > span > img {
     width: 100%;
   }
-  
+
   .category > div > div > div > img {
     width: calc(359 * 100vw / var(--width_after_breakpoint));
     height: calc(479 * 100vw / var(--width_after_breakpoint));
   }
-  
+
   .category > div > div > div > p {
-    margin-top: calc(2 * 100vw / var(--width_after_breakpoint));
+    margin-top: calc(14 * 100vw / var(--width_after_breakpoint));
     font-size: calc(24 * 100vw / var(--width_after_breakpoint));
     font-weight: 700;
   }
-  
+
+  .not_found {
+    width: 100%;
+    height: calc(50 * 100vw / var(--width_after_breakpoint));
+    font-size: calc(42 * 100vw / var(--width_after_breakpoint));
+  }
 }

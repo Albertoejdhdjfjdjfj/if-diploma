@@ -94,7 +94,6 @@
     width: calc(363 * 100vw / var(--width_after_breakpoint));
     height: calc(167 * 100vw / var(--width_after_breakpoint));
     margin-top: calc(40 * 100vw / var(--width_after_breakpoint));
-    background: #ede7f0;
     display: flex;
     align-items: center;
   }
@@ -108,4 +107,12 @@
     font-size: calc(42 * 100vw / var(--width_after_breakpoint));
     margin-left: calc(48 * 100vw / var(--width_after_breakpoint));
   }
+}
+
+#active {
+  background-color: #ede7f029;
+}
+
+#inactive {
+  background: #ede7f0;
 }

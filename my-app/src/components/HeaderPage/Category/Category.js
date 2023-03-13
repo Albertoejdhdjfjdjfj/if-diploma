@@ -1,52 +1,70 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import './Category.css';
 import heart from '../../../assets/images/heart.svg';
+import {
+  step_after_breakpoint,
+  step_before_breakpoint,
+  window_before_breakpoint,
+  window_after_breakpoint,
+  start_hight_of_page_after,
+  start_hight_of_page_before,
+  margin_top_button_after,
+  margin_top_button_before,
+  margin_cell_before_breakpoint,
+  margin_cell_after_breakpoint
+} from './variables';
 
 const Category = () => {
-  const after_breakpoint = 850;
-  const before_breakpoint = 2880;
-  const height_cell_before_breakpoint = (888 * 100) / before_breakpoint;
-  const height_cell_after_breakpoint = (528 * 100) / after_breakpoint;
-  const step_cell_before_breakpoint = (89 * 100) / before_breakpoint;
-  const step_cell_after_breakpoint = (50 * 100) / after_breakpoint;
-
-  const [heightSlider, setHeightSlider] = useState((2043 * 100) / before_breakpoint);
-  const [heightSlider, setHeightSlider] = useState((2043 * 100) / before_breakpoint);
-  const [topButton,setTopButton]=useState((2404 * 100) / before_breakpoint);
-  const [data, setData] = useState(false);
+  const [numSlider, setNumSlider] = useState(0);
+  const [filterData, setFilterData] = useState(false);
 
   const category = useSelector((state) => state.category);
+  const data = useSelector((state) => state.products);
 
-  const slide = () => {
-    if (window.innerWidth >= after_breakpoint) {
-      if (
-        height <=
-        Math.trunc(data.length / 8 + 3) *
-          (step_cell_before_breakpoint + height_cell_before_breakpoint)
-      ) {
-        setHeightSlider(height + 2*(step_cell_before_breakpoint + height_cell_before_breakpoint));
-        setTopButton(topButton + 2*(step_cell_before_breakpoint + height_cell_before_breakpoint));
-      }
-    }
-   
-  };
+  // const handleFilterData = useMemo(() => {
+  //   if (!Array.isArray(data)) {
+  //     setFilterData(false);
+  //   } else {
+  //     let result = data.filter((item) => item.type === category);
+  //     if (result.length !== 0) {
+  //       setFilterData(result);
+  //     } else {
+  //       setFilterData(['No beauty products found']);
+  //     }
+  //   }
+  // }, [category]);
 
-  useEffect(() => {
-    fetch('https://if-modnikky-api.onrender.com/api/catalog')
-      .then((response) => response.json())
-      .then((json) => setData(json));
-  }, []);
+  // const handleHeight = (height_before, height_after) => {
+  //   if (window.innerWidth >= window_after_breakpoint) {
+  //     return height_before + step_before_breakpoint * numOfClick;
+  //   }
+
+  //   return height_after + step_after_breakpoint * numOfClick;
+  // };
+
+  // const handleNumOfClickChange = () => {
+  //   if (data.length / 8 > 1) {
+  //     if (Math.trunc(data.length / 8 - 1) > numOfClick) {
+  //       setNumOfClick(numOfClick + 1);
+  //     }
+  //   }
+  // };
 
   return (
-    data && (
-      <div className="category">
+    filterData && (
+      <div
+        style={{
+          height: `${handleHeight(start_hight_of_page_before, start_hight_of_page_after)}vw`
+        }}
+        className="category"
+      >
         <h3>{category}</h3>
 
-        <div style={{ height: `${heightSlider}vw` }}>
+        <div style={{ height: `${handleHeight(0, 0)}vw` }}>
           <div>
-            {data.map((item) => (
+            { filterData.map((item) => (
               <div key={item.id}>
                 <span>
                   <img src={heart} />
@@ -57,7 +75,15 @@ const Category = () => {
             ))}
           </div>
         </div>
-        <p style={{marginTop:`${topButton}`}}onClick={slide}>Show more</p>
+
+        <p
+          onClick={handleNumOfClickChange}
+          style={{
+            marginTop: `${handleHeight(margin_top_button_before, margin_top_button_after)}vw`
+          }}
+        >
+          Show more
+        </p>
       </div>
     )
   );
