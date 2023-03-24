@@ -33,22 +33,15 @@
   width: calc(2492 * 100vw / var(--width_before_breakpoint));
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   position: absolute;
   z-index: 1;
   overflow: hidden;
 }
 
-.category > p {
-  width: calc(480 * 100vw / var(--width_before_breakpoint));
-  height: calc(100 * 100vw / var(--width_before_breakpoint));
-  font-size: calc(40 * 100vw / var(--width_before_breakpoint));
-  border: 2px solid #000f08;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
+.category > div > p {
+  display: inline;
 }
 
 .category > div > div {
@@ -120,7 +113,7 @@
     overflow: hidden;
   }
 
-  .category > p {
+  .category > div > p {
     width: calc(440 * 100vw / var(--width_after_breakpoint));
     height: calc(80 * 100vw / var(--width_after_breakpoint));
     font-size: calc(28 * 100vw / var(--width_after_breakpoint));

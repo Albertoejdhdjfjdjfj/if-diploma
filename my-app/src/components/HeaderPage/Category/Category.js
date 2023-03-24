@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useState, useEffect, useMemo } from 'react';
 import './Category.css';
-import heart from '../../../assets/images/heart.svg';
 import {
   step_after_breakpoint,
   step_before_breakpoint,
@@ -14,43 +13,88 @@ import {
   margin_top_button_before,
   margin_cell_before_breakpoint,
   margin_cell_after_breakpoint
-} from './variables';
+} from './helpers/variables';
+
+import Products from './helpers/Products';
 
 const Category = () => {
-  const [numSlider, setNumSlider] = useState(0);
+  const [numSlides, setNumSlides] = useState(0);
   const [filterData, setFilterData] = useState(false);
+  const [buttonDisplay, setButtonDisplay] = useState(true);
 
   const category = useSelector((state) => state.category);
   const data = useSelector((state) => state.products);
 
-  // const handleFilterData = useMemo(() => {
-  //   if (!Array.isArray(data)) {
-  //     setFilterData(false);
-  //   } else {
-  //     let result = data.filter((item) => item.type === category);
-  //     if (result.length !== 0) {
-  //       setFilterData(result);
-  //     } else {
-  //       setFilterData(['No beauty products found']);
-  //     }
-  //   }
-  // }, [category]);
+  const handleNumOfSlidesChange = () => {
+    if (numSlides < filterData.length) {
+      if (filterData.length - numSlides <= 4) {
+        setNumSlides(numSlides + 4);
+      } else {
+        setNumSlides(numSlides + 8);
+      }
+    }
+  };
 
-  // const handleHeight = (height_before, height_after) => {
-  //   if (window.innerWidth >= window_after_breakpoint) {
-  //     return height_before + step_before_breakpoint * numOfClick;
-  //   }
+  const handleHeightPage = (start_hight_of_page_before = 0, start_hight_of_page_after = 0) => {
+    if (window.innerWidth >= window_after_breakpoint) {
+      if (filterData.length - numSlides <= 4) {
+        setButtonDisplay(false);
+        return (
+          start_hight_of_page_before +
+          Math.trunc(numSlides / 8) * 2 * step_before_breakpoint +
+          step_before_breakpoint
+        );
+      } else {
+        return start_hight_of_page_before + 2 * step_before_breakpoint;
+      }
+    } else {
+      if (filterData.length - numSlides <= 4) {
+        return start_hight_of_page_after + step_after_breakpoint;
+      } else {
+        return start_hight_of_page_after + 2 * step_after_breakpoint;
+      }
+    }
+  };
 
-  //   return height_after + step_after_breakpoint * numOfClick;
-  // };
+  const handleHeightSlider = (start_hight_of_page_before = 0, start_hight_of_page_after = 0) => {
+    if (window.innerWidth >= window_after_breakpoint) {
+      if (filterData.length - numSlides <= 4) {
+        setButtonDisplay(false);
+        return (
+          start_hight_of_page_before +
+          Math.trunc(numSlides / 8) * 2 * step_before_breakpoint +
+          step_before_breakpoint
+        );
+      } else {
+        return start_hight_of_page_before + 2 * step_before_breakpoint;
+      }
+    } else {
+      if (filterData.length - numSlides <= 4) {
+        return start_hight_of_page_after + step_after_breakpoint;
+      } else {
+        return start_hight_of_page_after + 2 * step_after_breakpoint;
+      }
+    }
+  };
 
-  // const handleNumOfClickChange = () => {
-  //   if (data.length / 8 > 1) {
-  //     if (Math.trunc(data.length / 8 - 1) > numOfClick) {
-  //       setNumOfClick(numOfClick + 1);
-  //     }
-  //   }
-  // };
+  useEffect(() => {
+    setNumSlides(0);
+    handleNumOfSlidesChange();
+  }, [category]);
+
+  useEffect(() => {
+    if (!Array.isArray(data)) {
+      setFilterData(false);
+    } else {
+      let result = data.filter((item) => item.type === category);
+      if (result.length !== 0) {
+        setFilterData(data.filter((item) => item.type === category));
+      } else {
+        setFilterData('No beauty products found');
+        setNumSlides(0);
+      }
+    }
+  }, [category]);
 
   return (
     filterData && (
@@ -62,28 +106,28 @@ const Category = () => {
       >
         <h3>{category}</h3>
 
-        <div style={{ height: `${handleHeight(0, 0)}vw` }}>
-          <div>
-            { filterData.map((item) => (
-              <div key={item.id}>
-                <span>
-                  <img src={heart} />
-                </span>
-                <img src={item.images[0]} />
-                <p>${item.price.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <p
-          onClick={handleNumOfClickChange}
+        <div
           style={{
-            marginTop: `${handleHeight(margin_top_button_before, margin_top_button_after)}vw`
+            height: `${handleHeight(0, 0)}vw`
           }}
         >
-          Show more
-        </p>
+          {filterData !== 'No beauty products found' ? (
+            <Products products={filterData} />
+          ) : (
+            <p>No beauty products found</p>
+          )}
+        </div>
+
+        {buttonDisplay && (
+          <p
+            onClick={handleNumOfSlidesChange}
+            style={{
+              marginTop: `${handleHeight(margin_top_button_before, margin_top_button_after)}vw`
+            }}
+          >
+            Show more
+          </p>
+        )}
       </div>
     )
   );

@@ -13,7 +13,7 @@ export default function reducer(state = initialState, action) {
     case SET_SHOP_CATEGORY:
       return { ...state, category: action.payload };
     case REQUEST_PRODUCTS:
-      return { ...state, products: false };
+      return { ...state, products: 'loading' };
     case REQUEST_PRODUCTS_SUCCESS:
       return { ...state, products: action.payload };
     case REQUEST_PRODUCTS_ERROR:

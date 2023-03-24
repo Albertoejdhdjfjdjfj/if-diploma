@@ -9,6 +9,7 @@ import InstagramShop from './InstagramShop/InstagramShop';
 import Footer from './Footer/Footer';
 import Product from '../ProductDesktop/Product';
 import Search from './Search/Search';
+import ShoppingCart from '../ShoppingCart/ShoppingCart';
 
 const HeaderPage = () => {
   const dispatch = useDispatch();
@@ -19,13 +20,7 @@ const HeaderPage = () => {
 
   return (
     <div>
-      {/* <TopSection /> */}
-      <Search />
-      <Categories />
-      <Category />
-      <SliderSection />
-      <InstagramShop />
-      <Footer />
+      <ShoppingCart />
     </div>
   );
 };

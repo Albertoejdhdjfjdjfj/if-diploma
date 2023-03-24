@@ -11,7 +11,16 @@
   --width_after_breakpoint: 850;
 }
 
-.product > header {
+.shoppingCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shoppingCard > header {
+  background-color: white;
+  position: fixed;
   margin-top: 0;
   width: calc(2640 * 100vw / var(--width_before_breakpoint));
   height: calc(112 * 100vw / var(--width_before_breakpoint));
@@ -20,7 +29,7 @@
   align-items: center;
 }
 
-.product > header > div {
+.shoppingCard > header > div {
   width: calc(576 * 100vw / var(--width_before_breakpoint));
   display: flex;
   justify-content: space-between;
@@ -61,7 +70,7 @@ header > div > p > img {
 }
 
 @media screen and (max-width: 850px) {
-  .product > header {
+   .shoppingCard  > header {
     width: calc(810 * 100vw / var(--width_after_breakpoint));
     height: calc(100 * 100vw / var(--width_after_breakpoint));
     margin-top: 0;
