@@ -1,4 +1,3 @@
-
 @import url('../../assets/fonts/fonts.css');
 
 * {
@@ -14,12 +13,12 @@
   --width_after_breakpoint: 850;
 }
 
-body{
-     height: calc(1674 * 100vw / var(--width_before_breakpoint));
-     background-color: #BDBDBD;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+body {
+  height: calc(1674 * 100vw / var(--width_before_breakpoint));
+  background-color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sign_up {
@@ -31,182 +30,185 @@ body{
   background-color: white;
 }
 
-.sign_up>h2{
-     margin-top: calc(80 * 100vw / var(--width_before_breakpoint));
-     width: calc(798 * 100vw / var(--width_before_breakpoint));
-     display: flex;
-     justify-content: space-between;
-     font-size: calc(32 * 100vw / var(--width_before_breakpoint));
+.sign_up > h2 {
+  margin-top: calc(80 * 100vw / var(--width_before_breakpoint));
+  width: calc(798 * 100vw / var(--width_before_breakpoint));
+  display: flex;
+  justify-content: space-between;
+  font-size: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up>h2>img{
-     width: calc(32 * 100vw / var(--width_before_breakpoint));
-     height: calc(32 * 100vw / var(--width_before_breakpoint));
+.sign_up > h2 > img {
+  width: calc(32 * 100vw / var(--width_before_breakpoint));
+  height: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up>div{
-     margin-top: calc(40 * 100vw / var(--width_before_breakpoint));
-     width: calc(798 * 100vw / var(--width_before_breakpoint));
+.sign_up > div {
+  margin-top: calc(40 * 100vw / var(--width_before_breakpoint));
+  width: calc(798 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up>div>input{
-     width: 100%;
-     padding-bottom: calc(20 * 100vw / var(--width_before_breakpoint));
-     margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
-     border: none;
-     border-bottom: 1px solid #D8D8D8;
+.sign_up > div > input {
+  width: 100%;
+  padding-bottom: calc(20 * 100vw / var(--width_before_breakpoint));
+  margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
 }
 
-.sign_up>div>input::-webkit-input-placeholder {
-     font-size: calc(24 * 100vw / var(--width_before_breakpoint));
+.sign_up > div > input::-webkit-input-placeholder {
+  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up>button{
-     background-color: black;
-     margin-top: calc(24 * 100vw / var(--width_before_breakpoint));
-     width: calc(480 * 100vw / var(--width_before_breakpoint));
-     height: calc(100 * 100vw / var(--width_before_breakpoint));
-     border: none;
-     color: white;
-     font-size: calc(32 * 100vw / var(--width_before_breakpoint));
+.sign_up > button {
+  background-color: black;
+  margin-top: calc(24 * 100vw / var(--width_before_breakpoint));
+  width: calc(480 * 100vw / var(--width_before_breakpoint));
+  height: calc(100 * 100vw / var(--width_before_breakpoint));
+  border: none;
+  color: white;
+  font-size: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up>span{
-     margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
-     width: calc(798 * 100vw / var(--width_before_breakpoint));
+.sign_up > span {
+  margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
+  width: calc(798 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up>span>a{
-     font-size: calc(24 * 100vw / var(--width_before_breakpoint));
-     color: black;
+.sign_up > span > a {
+  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
+  color: black;
 }
 
-.conventions{
-     margin-top:  calc(67 * 100vw / var(--width_before_breakpoint));
+.conventions {
+  margin-top: calc(67 * 100vw / var(--width_before_breakpoint));
 }
 
-.conventions>div{
-     width:  calc(798 * 100vw / var(--width_before_breakpoint));
-     display: flex;
+.conventions > div {
+  width: calc(798 * 100vw / var(--width_before_breakpoint));
+  display: flex;
 }
 
-.conventions>div>input{
-     width:  calc(32 * 100vw / var(--width_before_breakpoint));
-     height:  calc(32 * 100vw / var(--width_before_breakpoint));
-     border: none;
+.conventions > div > input {
+  width: calc(32 * 100vw / var(--width_before_breakpoint));
+  height: calc(32 * 100vw / var(--width_before_breakpoint));
+  border: none;
 }
 
-.conventions>div>label{
-     font-size:  calc(24 * 100vw / var(--width_before_breakpoint));
-     margin-left:  calc(20 * 100vw / var(--width_before_breakpoint));
+.conventions > div > label:checked {
+  background-color: black;
 }
 
-.conventions>p{
-     margin-top: calc(40 * 100vw / var(--width_before_breakpoint));
-     font-size:  calc(24 * 100vw / var(--width_before_breakpoint));
-     color: #8C8C8C;
+.conventions > div > label {
+  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
+  margin-left: calc(20 * 100vw / var(--width_before_breakpoint));
 }
 
-.conventions>p>a{
-     color:black;
+.conventions > p {
+  margin-top: calc(40 * 100vw / var(--width_before_breakpoint));
+  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
+  color: #8c8c8c;
+}
+
+.conventions > p > a {
+  color: black;
 }
 
 @media screen and (max-width: 850px) {
-   
-     body{
-          height: calc(1576 * 100vw / var( --width_after_breakpoint));
-          background-color: #BDBDBD;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-     }
-     
-     .sign_up {
-       width: calc(846 * 100vw / var( --width_after_breakpoint));
-       height: calc(1125 * 100vw / var( --width_after_breakpoint));
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       background-color: white;
-     }
-     
-     .sign_up>h2{
-          margin-top: calc(80 * 100vw / var( --width_after_breakpoint));
-          width: calc(726 * 100vw / var( --width_after_breakpoint));
-          display: flex;
-          justify-content: space-between;
-          font-size: calc(32 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .sign_up>h2>img{
-          width: calc(32 * 100vw / var( --width_after_breakpoint));
-          height: calc(32 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .sign_up>div{
-          margin-top: calc(56 * 100vw / var( --width_after_breakpoint));
-          width: calc(726 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .sign_up>div>input{
-          width: 100%;
-          padding-bottom: calc(20 * 100vw / var( --width_after_breakpoint));
-          margin-top: calc(60 * 100vw / var( --width_after_breakpoint));
-          border: none;
-          border-bottom: 1px solid #D8D8D8;
-     }
-     
-     .sign_up>div>input::-webkit-input-placeholder {
-          font-size: calc(24 * 100vw / var(--width_after_breakpoint));
-     }
+  body {
+    height: calc(1576 * 100vw / var(--width_after_breakpoint));
+    background-color: #bdbdbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-     .sign_up>button{
-          background-color: black;
-          margin-top: calc(24 * 100vw / var( --width_after_breakpoint));
-          width: calc(440 * 100vw / var( --width_after_breakpoint));
-          height: calc(80 * 100vw / var( --width_after_breakpoint));
-          border: none;
-          color: white;
-          font-size: calc(28 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .sign_up>span{
-          margin-top: calc(60 * 100vw / var( --width_after_breakpoint));
-          width: calc(798 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .sign_up>span>a{
-          font-size: calc(24 * 100vw / var( --width_after_breakpoint));
-          color: black;
-     }
-     
-     .conventions{
-          margin-top:  calc(67 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .conventions>div{
-          width:  calc(726 * 100vw / var( --width_after_breakpoint));
-          display: flex;
-     }
-     
-     .conventions>div>input{
-          width:  calc(32 * 100vw / var( --width_after_breakpoint));
-          height:  calc(32 * 100vw / var( --width_after_breakpoint));
-          border: none;
-     }
-     
-     .conventions>div>label{
-          font-size:  calc(24 * 100vw / var( --width_after_breakpoint));
-          margin-left:  calc(20 * 100vw / var( --width_after_breakpoint));
-     }
-     
-     .conventions>p{
-          margin-top: calc(80 * 100vw / var( --width_after_breakpoint));
-          font-size:  calc(24 * 100vw / var( --width_after_breakpoint));
-          color: #8C8C8C;
-     }
-     
-     .conventions>p>a{
-          color:black;
-     }
+  .sign_up {
+    width: calc(846 * 100vw / var(--width_after_breakpoint));
+    height: calc(1125 * 100vw / var(--width_after_breakpoint));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  .sign_up > h2 {
+    margin-top: calc(80 * 100vw / var(--width_after_breakpoint));
+    width: calc(726 * 100vw / var(--width_after_breakpoint));
+    display: flex;
+    justify-content: space-between;
+    font-size: calc(32 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .sign_up > h2 > img {
+    width: calc(32 * 100vw / var(--width_after_breakpoint));
+    height: calc(32 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .sign_up > div {
+    margin-top: calc(56 * 100vw / var(--width_after_breakpoint));
+    width: calc(726 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .sign_up > div > input {
+    width: 100%;
+    padding-bottom: calc(20 * 100vw / var(--width_after_breakpoint));
+    margin-top: calc(60 * 100vw / var(--width_after_breakpoint));
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .sign_up > div > input::-webkit-input-placeholder {
+    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .sign_up > button {
+    background-color: black;
+    margin-top: calc(24 * 100vw / var(--width_after_breakpoint));
+    width: calc(440 * 100vw / var(--width_after_breakpoint));
+    height: calc(80 * 100vw / var(--width_after_breakpoint));
+    border: none;
+    color: white;
+    font-size: calc(28 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .sign_up > span {
+    margin-top: calc(60 * 100vw / var(--width_after_breakpoint));
+    width: calc(798 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .sign_up > span > a {
+    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
+    color: black;
+  }
+
+  .conventions {
+    margin-top: calc(67 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .conventions > div {
+    width: calc(726 * 100vw / var(--width_after_breakpoint));
+    display: flex;
+  }
+
+  .conventions > div > input {
+    width: calc(32 * 100vw / var(--width_after_breakpoint));
+    height: calc(32 * 100vw / var(--width_after_breakpoint));
+    border: none;
+  }
+
+  .conventions > div > label {
+    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
+    margin-left: calc(20 * 100vw / var(--width_after_breakpoint));
+  }
+
+  .conventions > p {
+    margin-top: calc(80 * 100vw / var(--width_after_breakpoint));
+    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
+    color: #8c8c8c;
+  }
+
+  .conventions > p > a {
+    color: black;
+  }
 }
