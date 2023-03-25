@@ -10,6 +10,7 @@ import Footer from './Footer/Footer';
 import Product from '../ProductDesktop/Product';
 import Search from './Search/Search';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
+import SignUp from '../SignUp/SignUp';
 
 const HeaderPage = () => {
   const dispatch = useDispatch();
@@ -19,9 +20,7 @@ const HeaderPage = () => {
   }, []);
 
   return (
-    <div>
-      <ShoppingCart />
-    </div>
+      <SignUp/>
   );
 };
 

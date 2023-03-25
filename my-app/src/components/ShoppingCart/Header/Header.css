@@ -70,7 +70,7 @@ header > div > p > img {
 }
 
 @media screen and (max-width: 850px) {
-   .shoppingCard  > header {
+  .shoppingCard > header {
     width: calc(810 * 100vw / var(--width_after_breakpoint));
     height: calc(100 * 100vw / var(--width_after_breakpoint));
     margin-top: 0;
