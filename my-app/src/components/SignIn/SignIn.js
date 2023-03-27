@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import {setUserId} from '../../redux/actions/actions'
+import { setUserId } from '../../redux/actions/actions';
 import './SignIn.css';
 
 const SignIn = () => {
@@ -18,7 +18,7 @@ const SignIn = () => {
     );
 
     user[0]
-      ? (dispatch(setUserId(user[0].id)),navigate('/'))
+      ? (dispatch(setUserId(user[0].id)), navigate('/'))
       : setError('Invalid email or password');
   };
 

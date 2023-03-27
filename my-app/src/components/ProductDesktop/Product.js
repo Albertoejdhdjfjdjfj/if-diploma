@@ -25,7 +25,7 @@ const Product = () => {
       method: 'POST',
       body: JSON.stringify({
         userId: localStorage.getItem('id'),
-        id: id
+        product:product
       })
     });
   };

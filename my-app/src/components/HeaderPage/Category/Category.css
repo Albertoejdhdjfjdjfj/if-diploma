@@ -50,8 +50,6 @@
   font-size: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-
-
 .category > div > div {
   width: calc(2492 * 100vw / var(--width_before_breakpoint));
   display: flex;
@@ -87,7 +85,6 @@
   font-size: calc(40 * 100vw / var(--width_before_breakpoint));
   font-weight: 700;
 }
-
 
 @media screen and (max-width: 850px) {
   .category {

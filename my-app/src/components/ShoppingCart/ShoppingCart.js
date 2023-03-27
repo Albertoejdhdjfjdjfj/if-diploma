@@ -1,5 +1,6 @@
-import React,{useEffect} from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState,useEffect } from 'react';
+import { useSelector,useDispatch } from 'react-redux';
+import fetchBag from '../../redux/actions/actions';
 import Header from './Header/Header';
 import Footer from '../HeaderPage/Footer/Footer';
 import './ShoppingCart.css';
@@ -8,7 +9,32 @@ import maestro_logo from '../../assets/images/maestro-logo.svg';
 import visa_logo from '../../assets/images/visa-logo.svg';
 
 const ShoppingCart = () => {
-  const data = useSelector((state) => state.headerPage.products);
+const[data,setData]=useState(false);
+const userId = useSelector((state) => state.user.id);
+
+const fetchProduct=()=>{
+  fetch(`http://localhost:3001/bag?userId=${userId}`)
+  .then(res=>res.json())
+  .then(json=>setData(json))
+}
+
+const deleteProduct=async(id)=>{
+  await fetch(`http://localhost:3001/bag/${id}`, { 
+    method: 'DELETE',
+    headers: {
+      'Content-Type':'application/json'
+    }
+  })
+
+  fetchProduct();
+}
+
+useEffect(()=>{
+  fetch(`http://localhost:3001/bag?userId=${userId}`)
+  .then(res=>res.json())
+  .then(json=>setData(json))
+},[])
+
   return (
     data !== 'loading' &&
     data && (
@@ -19,11 +45,11 @@ const ShoppingCart = () => {
           {data.map((item) => (
             <div key={item.id}>
               <div>
-                <img src={item.images[0]} />
+                <img src={item.product.images[0]} />
                 <div>
-                  <p>{item.name}</p>
+                  <p>{item.product.name}</p>
                   <span>
-                    {item.price.currency} {item.price.value}
+                    USD {item.product.price.value}
                   </span>
                   <div>
                     <p>COLOR: WHITE</p>
@@ -32,7 +58,7 @@ const ShoppingCart = () => {
                   </div>
                 </div>
               </div>
-              <span>
+              <span onClick={()=>deleteProduct(item.id)}>
                 <img src={remove_icon} /> <p>REMOVE</p>
               </span>
               <hr />
@@ -40,7 +66,7 @@ const ShoppingCart = () => {
           ))}
         </div>
         <span>
-          <p>{data[0].price.currency}</p>
+          <p>USD</p>
           <button>PROCED TO CHECKOUT</button>
           <div>
             <img src={maestro_logo} />
