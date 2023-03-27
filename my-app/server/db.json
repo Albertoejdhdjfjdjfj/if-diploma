@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "ivan",
+      "lastName": "ivan",
+      "email": "ivan",
+      "password": "123"
+    }
+  ],
+  "favorites": [
+    {
+      "userId": "1",
+      "id": "5cd9a543-e4a3-4aa7-afa7-a78cf716ad9d"
+    },
+    {
+      "userId": "1",
+      "id": "bb5d77d1-7f4d-432c-a508-71dc8d7d3784"
+    },
+    {
+      "userId": "1",
+      "id": "63ff4fbc-7c61-4037-91ef-7c325d45d349"
+    },
+    {
+      "userId": "1",
+      "id": "1314a7c9-853e-494b-bba4-de8e1ecf6134"
+    },
+    {
+      "userId": "1",
+      "id": "c07c6fd2-ccc8-4575-a2c7-415b380b777e"
+    },
+    {
+      "userId": "1",
+      "id": "f47fb063-888d-4d33-a906-0b56c22dcbd2"
+    },
+    {
+      "userId": "1",
+      "id": "aed4860f-1c04-4c4c-b1ae-9fdb5de09afb"
+    },
+    {
+      "userId": "1",
+      "id": "45f1f692-386b-4232-8468-7d8aa208954c"
+    },
+    {
+      "userId": "1",
+      "id": "44aa2ccb-59ca-40b7-a3e4-c3d3bc6b9d34"
+    },
+    {
+      "userId": "1",
+      "id": "b9fdbfd0-364f-47c7-8eb3-73342d6680e7"
+    },
+    {
+      "userId": "1",
+      "id": "70294935-bfbf-4bb5-92d8-f106596e85b7"
+    },
+    {
+      "userId": "1",
+      "id": "57258134-9fa5-4821-83f1-c62159877052"
+    }
+  ],
+  "bag": [
+    {
+      "userId": 1,
+      "id": "5cd9a543-e4a3-4aa7-afa7-a78cf716ad9d"
+    },
+    {
+      "userId": 2,
+      "id": "5cd9a543-e4a3-4aa7-afa7-a78cf716ad9d"
+    },
+    {
+      "userId": "1",
+      "id": "bb5d77d1-7f4d-432c-a508-71dc8d7d3784"
+    },
+    {
+      "userId": "1",
+      "id": "57258134-9fa5-4821-83f1-c62159877052"
+    }
+  ]
+}

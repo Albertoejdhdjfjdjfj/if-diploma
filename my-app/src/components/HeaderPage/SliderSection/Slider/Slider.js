@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Slider.css';
 import arrowRight from '../../../../assets/images/arrowRight.svg';
 import heart from '../../../../assets/images/heart.svg';
@@ -13,11 +14,27 @@ function Slider() {
   const left_cell_before_breakpoint = (24 * 100) / before_breakpoint;
   const left_cell_after_breakpoint = (27 * 100) / after_breakpoint;
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetch('https://if-modnikky-api.onrender.com/api/catalog')
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
+
+  const addToFavorites = async (id) => {
+    await fetch('http://localhost:3001/favorites', {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        userId: localStorage.getItem('id'),
+        id: id
+      })
+    });
+  };
 
   const slide = () => {
     if (window.innerWidth >= after_breakpoint) {
@@ -45,10 +62,10 @@ function Slider() {
           <div style={{ marginLeft: `${left}vw` }}>
             {data.map((item) => (
               <div key={item.id}>
-                <span>
+                <span onClick={() => addToFavorites(item.id)}>
                   <img src={heart} />
                 </span>
-                <img src={item.images[0]} />
+                <img src={item.images[0]} onClick={() => navigate(`/product/${item.id}`)} />
                 <p>${item.price.value}</p>
               </div>
             ))}

@@ -9,7 +9,7 @@ import {
   start_hight_of_page_after,
   start_hight_of_page_before,
   margin_top_button_after,
-  margin_top_button_before,
+  margin_top_button_before
 } from './helpers/variables';
 
 import Products from './helpers/Products';
@@ -18,8 +18,8 @@ const Category = () => {
   const [numSlides, setNumSlides] = useState(0);
   const [filterData, setFilterData] = useState(false);
 
-  const category = useSelector((state) => state.category);
-  const data = useSelector((state) => state.products);
+  const category = useSelector((state) => state.headerPage.category);
+  const data = useSelector((state) => state.headerPage.products);
 
   const handleNumOfSlidesChange = () => {
     if (filterData.length - numSlides > 4) {
@@ -38,7 +38,7 @@ const Category = () => {
 
   useEffect(() => {
     if (Array.isArray(data)) {
-      setFilterData(data);
+      setFilterData(data.filter((i) => i.type === category));
     }
   }, [category]);
 
@@ -48,7 +48,8 @@ const Category = () => {
   }, [category]);
 
   return (
-    filterData && (
+    filterData &&
+    category !== '' && (
       <div
         style={{
           height: `${handleHeight(start_hight_of_page_before, start_hight_of_page_after)}vw`

@@ -1,15 +1,14 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import { useSelector } from 'react-redux';
 import Header from './Header/Header';
 import Footer from '../HeaderPage/Footer/Footer';
-import { useSelector } from 'react-redux';
 import './ShoppingCart.css';
 import remove_icon from '../../assets/images/remove-icon.svg';
 import maestro_logo from '../../assets/images/maestro-logo.svg';
 import visa_logo from '../../assets/images/visa-logo.svg';
 
 const ShoppingCart = () => {
-  const data = useSelector((state) => state.products);
-
+  const data = useSelector((state) => state.headerPage.products);
   return (
     data !== 'loading' &&
     data && (

@@ -10,20 +10,16 @@ import tops from '../../../assets/images/tops.svg';
 import beauty from '../../../assets/images/beauty.svg';
 
 const Categories = () => {
-  const defaultStateBtns = {
-    Dresses: 'inactive',
-    Tees: 'inactive',
-    Swimwear: 'inactive',
-    Denim: 'inactive',
-    Tops: 'inactive',
-    Beauty: 'inactive'
-  };
   const dispatch = useDispatch();
-  const handleChangeStateBtns = (category) => {
-    dispatch(setShopCategory(category));
-  };
+  const category = useSelector((state) => state.headerPage.category);
 
-  const category = useSelector((state) => state.category);
+  const handleChangeStateBtns = (categoryName) => {
+    if (category === categoryName) {
+      dispatch(setShopCategory(''));
+    } else {
+      dispatch(setShopCategory(categoryName));
+    }
+  };
 
   return (
     <div className="categories">

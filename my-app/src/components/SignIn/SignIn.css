@@ -13,7 +13,7 @@
   --width_after_breakpoint: 850;
 }
 
-.sign_up {
+.sign_in {
   width: calc(996 * 100vw / var(--width_before_breakpoint));
   height: calc(1125 * 100vw / var(--width_before_breakpoint));
   display: flex;
@@ -22,46 +22,41 @@
   background-color: white;
 }
 
-.sign_up > h2 {
+.sign_in > h2 {
   margin-top: calc(80 * 100vw / var(--width_before_breakpoint));
   width: calc(798 * 100vw / var(--width_before_breakpoint));
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up > h2 > img {
-  width: calc(32 * 100vw / var(--width_before_breakpoint));
-  height: calc(32 * 100vw / var(--width_before_breakpoint));
-}
-
-.sign_up > div {
+.sign_in > div {
   margin-top: calc(40 * 100vw / var(--width_before_breakpoint));
   width: calc(798 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up > div > input {
+.sign_in > div > input {
   width: 100%;
   padding-bottom: calc(20 * 100vw / var(--width_before_breakpoint));
-  margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
+  margin-top: calc(80 * 100vw / var(--width_before_breakpoint));
   border: none;
   border-bottom: 1px solid #d8d8d8;
 }
 
-.sign_up > div > p {
-  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
-  margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
+.sign_in > div > p {
+  width: 100%;
+  margin-top: calc(20 * 100vw / var(--width_before_breakpoint));
   display: flex;
   justify-content: center;
 }
 
-.sign_up > div > input::-webkit-input-placeholder {
+.sign_in > div > input::-webkit-input-placeholder {
   font-size: calc(24 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up > button {
+.sign_in > button {
   background-color: black;
-  margin-top: calc(24 * 100vw / var(--width_before_breakpoint));
+  margin-top: calc(80 * 100vw / var(--width_before_breakpoint));
   width: calc(480 * 100vw / var(--width_before_breakpoint));
   height: calc(100 * 100vw / var(--width_before_breakpoint));
   border: none;
@@ -69,52 +64,18 @@
   font-size: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up > span {
+.sign_in > span {
   margin-top: calc(60 * 100vw / var(--width_before_breakpoint));
   width: calc(798 * 100vw / var(--width_before_breakpoint));
 }
 
-.sign_up > span > a {
+.sign_in > span > a {
   font-size: calc(24 * 100vw / var(--width_before_breakpoint));
-  color: black;
-}
-
-.conventions {
-  margin-top: calc(67 * 100vw / var(--width_before_breakpoint));
-}
-
-.conventions > div {
-  width: calc(798 * 100vw / var(--width_before_breakpoint));
-  display: flex;
-}
-
-.conventions > div > input {
-  width: calc(32 * 100vw / var(--width_before_breakpoint));
-  height: calc(32 * 100vw / var(--width_before_breakpoint));
-  border: none;
-}
-
-.conventions > div > label:checked {
-  background-color: black;
-}
-
-.conventions > div > label {
-  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
-  margin-left: calc(20 * 100vw / var(--width_before_breakpoint));
-}
-
-.conventions > p {
-  margin-top: calc(40 * 100vw / var(--width_before_breakpoint));
-  font-size: calc(24 * 100vw / var(--width_before_breakpoint));
-  color: #8c8c8c;
-}
-
-.conventions > p > a {
   color: black;
 }
 
 @media screen and (max-width: 850px) {
-  .sign_up {
+  .sign_in {
     width: calc(846 * 100vw / var(--width_after_breakpoint));
     height: calc(1125 * 100vw / var(--width_after_breakpoint));
     display: flex;
@@ -123,20 +84,27 @@
     background-color: white;
   }
 
-  .sign_up > h2 {
+  .sign_in > h2 {
     margin-top: calc(80 * 100vw / var(--width_after_breakpoint));
     width: calc(726 * 100vw / var(--width_after_breakpoint));
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: calc(32 * 100vw / var(--width_after_breakpoint));
   }
 
-  .sign_up > div {
+  .sign_in > div {
     margin-top: calc(56 * 100vw / var(--width_after_breakpoint));
     width: calc(726 * 100vw / var(--width_after_breakpoint));
   }
 
-  .sign_up > div > input {
+  .sign_in > div > p {
+    width: 100%;
+    margin-top: calc(20 * 100vw / var(--width_before_breakpoint));
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign_in > div > input {
     width: 100%;
     padding-bottom: calc(20 * 100vw / var(--width_after_breakpoint));
     margin-top: calc(60 * 100vw / var(--width_after_breakpoint));
@@ -144,18 +112,11 @@
     border-bottom: 1px solid #d8d8d8;
   }
 
-  .sign_up > div > p {
-    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
-    margin-top: calc(60 * 100vw / var(--width_after_breakpoint));
-    display: flex;
-    justify-content: center;
-  }
-
-  .sign_up > div > input::-webkit-input-placeholder {
+  .sign_in > div > input::-webkit-input-placeholder {
     font-size: calc(24 * 100vw / var(--width_after_breakpoint));
   }
 
-  .sign_up > button {
+  .sign_in > button {
     background-color: black;
     margin-top: calc(24 * 100vw / var(--width_after_breakpoint));
     width: calc(440 * 100vw / var(--width_after_breakpoint));
@@ -165,43 +126,13 @@
     font-size: calc(28 * 100vw / var(--width_after_breakpoint));
   }
 
-  .sign_up > span {
+  .sign_in > span {
     margin-top: calc(60 * 100vw / var(--width_after_breakpoint));
     width: calc(798 * 100vw / var(--width_after_breakpoint));
   }
 
-  .sign_up > span > a {
+  .sign_in > span > a {
     font-size: calc(24 * 100vw / var(--width_after_breakpoint));
-    color: black;
-  }
-
-  .conventions {
-    margin-top: calc(67 * 100vw / var(--width_after_breakpoint));
-  }
-
-  .conventions > div {
-    width: calc(726 * 100vw / var(--width_after_breakpoint));
-    display: flex;
-  }
-
-  .conventions > div > input {
-    width: calc(32 * 100vw / var(--width_after_breakpoint));
-    height: calc(32 * 100vw / var(--width_after_breakpoint));
-    border: none;
-  }
-
-  .conventions > div > label {
-    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
-    margin-left: calc(20 * 100vw / var(--width_after_breakpoint));
-  }
-
-  .conventions > p {
-    margin-top: calc(80 * 100vw / var(--width_after_breakpoint));
-    font-size: calc(24 * 100vw / var(--width_after_breakpoint));
-    color: #8c8c8c;
-  }
-
-  .conventions > p > a {
     color: black;
   }
 }

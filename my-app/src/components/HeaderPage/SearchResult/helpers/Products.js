@@ -22,8 +22,8 @@ const Products = ({ products }) => {
     <div>
       {products.map((item) => (
         <div key={item.id}>
-          <span onClick={() => addToFavorites(item.id)}>
-            <img src={heart} />
+          <span>
+            <img src={heart} onClick={() => addToFavorites(item.id)} />
           </span>
           <img src={item.images[0]} onClick={() => navigate(`/product/${item.id}`)} />
           <p>${item.price.value}</p>

@@ -50,7 +50,9 @@
   font-size: calc(32 * 100vw / var(--width_before_breakpoint));
 }
 
-
+.category > div > p {
+  display: inline;
+}
 
 .category > div > div {
   width: calc(2492 * 100vw / var(--width_before_breakpoint));
@@ -88,6 +90,11 @@
   font-weight: 700;
 }
 
+.not_found {
+  width: 100%;
+  text-align: center;
+  font-size: calc(48 * 100vw / var(--width_before_breakpoint));
+}
 
 @media screen and (max-width: 850px) {
   .category {
@@ -160,5 +167,11 @@
     margin-top: calc(14 * 100vw / var(--width_after_breakpoint));
     font-size: calc(24 * 100vw / var(--width_after_breakpoint));
     font-weight: 700;
+  }
+
+  .not_found {
+    width: 100%;
+    height: calc(50 * 100vw / var(--width_after_breakpoint));
+    font-size: calc(42 * 100vw / var(--width_after_breakpoint));
   }
 }
