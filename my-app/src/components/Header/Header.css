@@ -11,14 +11,8 @@
   --width_after_breakpoint: 850;
 }
 
-.shoppingCard {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.shoppingCard > header {
+ .header {
   background-color: white;
   position: fixed;
   margin-top: 0;
@@ -29,7 +23,7 @@
   align-items: center;
 }
 
-.shoppingCard > header > div {
+.header > div {
   width: calc(576 * 100vw / var(--width_before_breakpoint));
   display: flex;
   justify-content: space-between;
@@ -53,24 +47,25 @@ h1 {
   color: black;
 }
 
-header > div > p {
+.header > div > p {
   font-size: calc(24 * 100vw / var(--width_before_breakpoint));
   display: inline;
   color: black;
 }
 
-header > div > img {
+.header > div > img {
   width: calc(27 * 100vw / var(--width_before_breakpoint));
   height: calc(24 * 100vw / var(--width_before_breakpoint));
 }
 
-header > div > p > img {
+.header > div > p > img {
   width: calc(24 * 100vw / var(--width_before_breakpoint));
   height: calc(24 * 100vw / var(--width_before_breakpoint));
 }
 
 @media screen and (max-width: 850px) {
-  .shoppingCard > header {
+
+h .header {
     width: calc(810 * 100vw / var(--width_after_breakpoint));
     height: calc(100 * 100vw / var(--width_after_breakpoint));
     margin-top: 0;
@@ -79,7 +74,7 @@ header > div > p > img {
     align-items: center;
   }
 
-  header > div {
+  .header > div {
     width: calc(176 * 100vw / var(--width_after_breakpoint));
     display: flex;
     justify-content: space-between;
@@ -109,16 +104,16 @@ header > div > p > img {
     color: black;
   }
 
-  header > div > p {
+  .header > div > p {
     display: none;
   }
 
-  header > div > img {
+  .header > div > img {
     width: calc(36 * 100vw / var(--width_after_breakpoint));
     height: calc(32 * 100vw / var(--width_after_breakpoint));
   }
 
-  header > div > p > img {
+  .header > div > p > img {
     display: none;
   }
 }

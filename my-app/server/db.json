@@ -8,6 +8,132 @@
       "password": "123"
     }
   ],
-  "favorites": [],
-  "bag": []
+  "favorites": [
+    {
+      "userId": "1",
+      "id": {
+        "id": "bb5d77d1-7f4d-432c-a508-71dc8d7d3784",
+        "type": "Dresses",
+        "name": "PRINTED MINI DRESS",
+        "price": {
+          "currency": "USD",
+          "value": "3990"
+        },
+        "color": {
+          "name": "Blue",
+          "hex": "#0284CC"
+        },
+        "availableSizes": [
+          "XS, S, M, L, XL, XXL"
+        ],
+        "description": "V-NECK DRESS WITH THIN STRAPS. RUFFLED HEM. SIDE HIDDEN IN-SEAM ZIP CLOSURE.",
+        "images": [
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552035/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_2_1.webp",
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552100/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_2_2.webp"
+        ]
+      }
+    }
+  ],
+  "bag": [
+    {
+      "userId": "1",
+      "product": {
+        "id": "bb5d77d1-7f4d-432c-a508-71dc8d7d3784",
+        "type": "Dresses",
+        "name": "PRINTED MINI DRESS",
+        "price": {
+          "currency": "USD",
+          "value": "3990"
+        },
+        "color": {
+          "name": "Blue",
+          "hex": "#0284CC"
+        },
+        "availableSizes": [
+          "XS, S, M, L, XL, XXL"
+        ],
+        "description": "V-NECK DRESS WITH THIN STRAPS. RUFFLED HEM. SIDE HIDDEN IN-SEAM ZIP CLOSURE.",
+        "images": [
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552035/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_2_1.webp",
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552100/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_2_2.webp"
+        ]
+      },
+      "id": 1
+    },
+    {
+      "userId": "63ff4fbc-7c61-4037-91ef-7c325d45d349",
+      "product": {
+        "id": "63ff4fbc-7c61-4037-91ef-7c325d45d349",
+        "type": "Dresses",
+        "name": "RUCHED MIDI DRESS",
+        "price": {
+          "currency": "USD",
+          "value": "3590"
+        },
+        "color": {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        "availableSizes": [
+          "XS, S, M, L, XL, XXL"
+        ],
+        "description": "V-NECK MIDI DRESS WITH SPAGHETTI STRAPS THAT CROSS AT BACK. ADJUSTABLE DRAWSTRING WAIST AT BACK.",
+        "images": [
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552535/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_4_1.webp",
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552567/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_4_2.webp"
+        ]
+      },
+      "id": 2
+    },
+    {
+      "userId": "63ff4fbc-7c61-4037-91ef-7c325d45d349",
+      "product": {
+        "id": "63ff4fbc-7c61-4037-91ef-7c325d45d349",
+        "type": "Dresses",
+        "name": "RUCHED MIDI DRESS",
+        "price": {
+          "currency": "USD",
+          "value": "3590"
+        },
+        "color": {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        "availableSizes": [
+          "XS, S, M, L, XL, XXL"
+        ],
+        "description": "V-NECK MIDI DRESS WITH SPAGHETTI STRAPS THAT CROSS AT BACK. ADJUSTABLE DRAWSTRING WAIST AT BACK.",
+        "images": [
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552535/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_4_1.webp",
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552567/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_4_2.webp"
+        ]
+      },
+      "id": 3
+    },
+    {
+      "userId": "63ff4fbc-7c61-4037-91ef-7c325d45d349",
+      "product": {
+        "id": "63ff4fbc-7c61-4037-91ef-7c325d45d349",
+        "type": "Dresses",
+        "name": "RUCHED MIDI DRESS",
+        "price": {
+          "currency": "USD",
+          "value": "3590"
+        },
+        "color": {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        "availableSizes": [
+          "XS, S, M, L, XL, XXL"
+        ],
+        "description": "V-NECK MIDI DRESS WITH SPAGHETTI STRAPS THAT CROSS AT BACK. ADJUSTABLE DRAWSTRING WAIST AT BACK.",
+        "images": [
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552535/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_4_1.webp",
+          "https://res.cloudinary.com/intellectfox/image/upload/v1619552567/Diploma%20Front-end/Online%20shop_Modmikky/Dresses/dress_4_2.webp"
+        ]
+      },
+      "id": 4
+    }
+  ]
 }

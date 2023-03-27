@@ -13,6 +13,10 @@
   justify-content: space-between;
 }
 
+.topSection > header > div>p{
+  color: white;
+}
+
 .menu_burger {
   display: none;
 }
@@ -31,7 +35,7 @@
   color: white;
 }
 
-.topSection > header > div > p {
+.topSection > .header > div > p {
   font-size: calc(24 * 100vw / var(--width_before_breakpoint));
   display: inline;
   color: white;

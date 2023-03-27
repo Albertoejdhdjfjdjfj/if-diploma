@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Header from './Header/Header';
-import Footer from '../HeaderPage/Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import './Product.css';
 import heart from '../../assets/images/heart.svg';
 import plus from '../../assets/images/plus.svg';
 import minus from '../../assets/images/minus.svg';
 
-const Product = () => {
+const Product = memo(() => {
   const [product, setProduct] = useState(false);
   const { id } = useParams();
   const [descActive, setDescActive] = useState(false);
@@ -24,8 +24,8 @@ const Product = () => {
       },
       method: 'POST',
       body: JSON.stringify({
-        userId: localStorage.getItem('id'),
-        product:product
+        userId: id,
+        product: product
       })
     });
   };
@@ -38,8 +38,8 @@ const Product = () => {
       },
       method: 'POST',
       body: JSON.stringify({
-        userId: localStorage.getItem('id'),
-        id: id
+        userId: id,
+        id: product
       })
     });
   };
@@ -76,7 +76,7 @@ const Product = () => {
                 <p>SIZE</p>
                 <div>
                   {product.availableSizes.map((element) => (
-                    <p>{element}</p>
+                    <p key={element}>{element}</p>
                   ))}
                 </div>
               </div>
@@ -117,6 +117,6 @@ const Product = () => {
       </div>
     )
   );
-};
+});
 
 export default Product;

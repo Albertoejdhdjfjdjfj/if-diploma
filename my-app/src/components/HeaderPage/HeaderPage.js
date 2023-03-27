@@ -5,14 +5,14 @@ import Categories from './CategoriesSection/Categories';
 import Category from './Category/Category';
 import SliderSection from './SliderSection/SliderSection';
 import InstagramShop from './InstagramShop/InstagramShop';
-import Footer from './Footer/Footer';
+import Footer from '../Footer/Footer';
 import SearchResult from './SearchResult/SearchResult';
 import Search from './Search/Search';
 
 const HeaderPage = () => {
   const searchDisplay = useSelector((state) => state.headerPage.searchDisplay);
   return (
-    <div>
+    <div >
       {searchDisplay ? <Search /> : <TopSection />}
       <SearchResult />
       <Categories />

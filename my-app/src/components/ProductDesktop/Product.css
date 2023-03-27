@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.product>.header{
+  position: static;
+}
+
 .product > .footerSection {
   margin-top: 0;
 }
@@ -172,6 +176,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .product>.header{
+    position: static;
   }
 
   .product > .footerSection {
