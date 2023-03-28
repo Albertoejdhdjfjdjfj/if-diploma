@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import heart from '../../../../assets/images/heart.svg';
+
 const Products = ({ products }) => {
   const navigate = useNavigate();
 

@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.product>.header{
+.product > .header {
   position: static;
 }
 
@@ -178,7 +178,7 @@
     align-items: center;
   }
 
-  .product>.header{
+  .product > .header {
     position: static;
   }
 

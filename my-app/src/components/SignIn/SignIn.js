@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUserId } from '../../redux/actions/actions';
@@ -18,9 +18,24 @@ const SignIn = () => {
     );
 
     user[0]
-      ? (dispatch(setUserId(user[0].id)), navigate('/'))
+      ? (dispatch(setUserId(user[0].id)),
+        localStorage.setItem('email', email),
+        localStorage.setItem('password', password),
+        navigate('/'))
       : setError('Invalid email or password');
   };
+
+  useEffect(() => {
+    fetch(
+      `http://localhost:3001/users?email=${localStorage.getItem(
+        'email'
+      )}&password=${localStorage.getItem('password')}`
+    )
+      .then((response) => response.json())
+      .then((user) => {
+        user[0] ? (dispatch(setUserId(user[0].id)), navigate('/')) : '';
+      });
+  }, []);
 
   return (
     <div className="sign_in">

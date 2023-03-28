@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setSearchText } from '../../../redux/actions/actions';
 import { setSearchDisplay } from '../../../redux/actions/actions';
 import './Search.css';
+
 const Search = () => {
   const dispatch = useDispatch();
 

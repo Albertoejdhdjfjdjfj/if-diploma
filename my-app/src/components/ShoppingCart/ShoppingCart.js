@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import './ShoppingCart.css';
 import remove_icon from '../../assets/images/remove-icon.svg';
 import maestro_logo from '../../assets/images/maestro-logo.svg';
 import visa_logo from '../../assets/images/visa-logo.svg';
+import './ShoppingCart.css';
 
 const ShoppingCart = () => {
   const [data, setData] = useState(false);

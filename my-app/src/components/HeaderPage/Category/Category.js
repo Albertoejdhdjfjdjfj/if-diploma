@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useState, useEffect, useMemo } from 'react';
-import './Category.css';
 import {
   step_after_breakpoint,
   step_before_breakpoint,
@@ -11,7 +10,7 @@ import {
   margin_top_button_after,
   margin_top_button_before
 } from './helpers/variables';
-
+import './Category.css';
 import Products from './helpers/Products';
 
 const Category = () => {

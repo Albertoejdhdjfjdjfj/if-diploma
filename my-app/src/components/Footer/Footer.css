@@ -47,7 +47,7 @@
   margin-top: calc(80 * 100vw / var(--width_before_breakpoint));
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  border-bottom: 2px solid #d8d8d8;
 }
 
 .footerSection > div > div > input {
@@ -56,12 +56,8 @@
   border: none;
 }
 
-.footerSection > div > div > a {
+.footerSection > div > div > p {
   font-size: calc(32 * 100vw / var(--width_before_breakpoint));
-}
-
-.footerSection > div > hr {
-  width: calc(800 * 100vw / var(--width_before_breakpoint));
 }
 
 .footerSection > div > footer {

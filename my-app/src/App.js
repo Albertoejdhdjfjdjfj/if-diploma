@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { fetchProducts } from './redux/actions/actions';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import HeaderPage from './components/HeaderPage/HeaderPage';
 import SignIn from './components/SignIn/SignIn';
@@ -20,12 +20,12 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HeaderPage />} />
+        <Route path="/" element={id ? <HeaderPage /> : <Navigate to="/signIn" />} />
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/product/:id" element={<Product />} />
-        <Route path="/cart" element={<ShoppingCart />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/product/:id" element={id ? <Product /> : <Navigate to="/signIn" />} />
+        <Route path="/cart" element={id ? <ShoppingCart /> : <Navigate to="/signIn" />} />
+        <Route path="/favorites" element={id ? <Favorites /> : <Navigate to="/signIn" />} />
       </Routes>
     </div>
   );

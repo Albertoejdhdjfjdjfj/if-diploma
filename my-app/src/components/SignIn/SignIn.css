@@ -15,11 +15,15 @@
 
 .sign_in {
   width: calc(996 * 100vw / var(--width_before_breakpoint));
-  height: calc(1125 * 100vw / var(--width_before_breakpoint));
+  height: calc(900 * 100vw / var(--width_before_breakpoint));
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sign_in > h2 {

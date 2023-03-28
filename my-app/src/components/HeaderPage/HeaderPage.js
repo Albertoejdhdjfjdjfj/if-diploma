@@ -12,7 +12,7 @@ import Search from './Search/Search';
 const HeaderPage = () => {
   const searchDisplay = useSelector((state) => state.headerPage.searchDisplay);
   return (
-    <div >
+    <div>
       {searchDisplay ? <Search /> : <TopSection />}
       <SearchResult />
       <Categories />

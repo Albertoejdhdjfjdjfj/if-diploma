@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import './Product.css';
 import heart from '../../assets/images/heart.svg';
 import plus from '../../assets/images/plus.svg';
 import minus from '../../assets/images/minus.svg';
+import './Product.css';
 
 const Product = memo(() => {
   const [product, setProduct] = useState(false);
@@ -14,7 +14,9 @@ const Product = memo(() => {
   const [descActive, setDescActive] = useState(false);
   const [shippAndReturnActive, setShippAndReturnActive] = useState(false);
   const [fabricComposActive, setFabricComposActive] = useState(false);
+
   const products = useSelector((state) => state.headerPage.products);
+  const userId = useSelector((state) => state.user.id);
 
   const addToBag = async () => {
     await fetch('http://localhost:3001/bag', {
@@ -24,7 +26,7 @@ const Product = memo(() => {
       },
       method: 'POST',
       body: JSON.stringify({
-        userId: id,
+        userId: userId,
         product: product
       })
     });
@@ -38,8 +40,8 @@ const Product = memo(() => {
       },
       method: 'POST',
       body: JSON.stringify({
-        userId: id,
-        id: product
+        userId: userId,
+        product: product
       })
     });
   };

@@ -1,6 +1,6 @@
 import React from 'react';
-import './TopSection.css';
 import Header from '../Header/Header';
+import './TopSection.css';
 
 const TopSection = () => {
   return (

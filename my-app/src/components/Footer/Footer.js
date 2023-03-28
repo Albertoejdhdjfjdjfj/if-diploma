@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import facebook from '../../assets/images/facebok-logo.svg';
 import odnoklassniki from '../../assets/images/odnoklassniki.svg';
@@ -11,6 +11,26 @@ const Footer = () => {
   const [info, setInfo] = useState(window.innerWidth <= 850 ? false : true);
   const [follow, setFollow] = useState(window.innerWidth <= 850 ? false : true);
   const [contact, setContact] = useState(window.innerWidth <= 850 ? false : true);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState(false);
+
+  const followToNews = async () => {
+    const message = await fetch('https://if-modnikky-api.onrender.com/api/subscription', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: email
+      })
+    });
+    console.log(message.status);
+
+    if (message.status < 400) {
+      message = message.json();
+      setMessage(message);
+    }
+  };
 
   return (
     <div className="footerSection">
@@ -18,12 +38,18 @@ const Footer = () => {
         <h2>SIGN UP FOR UPDATES</h2>
         <p>Sign up for exclusive early sale access and tailored new arrivals.</p>
 
-        <div>
-          <input type="email" placeholder="Your email address" />
-          <a>JOIN</a>
-        </div>
+        {!message && (
+          <div>
+            <input
+              type="email"
+              placeholder="Your email address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <p onClick={followToNews}>JOIN</p>
+          </div>
+        )}
 
-        <hr />
+        {message && <p>{message}</p>}
 
         <footer>
           <div>

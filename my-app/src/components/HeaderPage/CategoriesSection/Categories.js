@@ -1,5 +1,4 @@
 import React from 'react';
-import './Categories.css';
 import { setShopCategory } from '../../../redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import dress from '../../../assets/images/dress.svg';
@@ -8,6 +7,7 @@ import swimwear from '../../../assets/images/swimwear.svg';
 import denim from '../../../assets/images/denim.svg';
 import tops from '../../../assets/images/tops.svg';
 import beauty from '../../../assets/images/beauty.svg';
+import './Categories.css';
 
 const Categories = () => {
   const dispatch = useDispatch();

@@ -15,11 +15,8 @@ const initialState = {
     search: '',
     searchDisplay: false
   },
-  bag: {
-    products: false
-  },
   user: {
-    id: 1
+    id: false
   }
 };
 
@@ -36,7 +33,10 @@ export default function reducer(state = initialState, action) {
     case SET_SEARCH_TEXT:
       return { ...state, headerPage: { ...state.headerPage, search: action.payload } };
     case SET_SEARCH_DISPLAY:
-      return { ...state, headerPage: { ...state.headerPage, searchDisplay: !state.headerPage.searchDisplay } };
+      return {
+        ...state,
+        headerPage: { ...state.headerPage, searchDisplay: !state.headerPage.searchDisplay }
+      };
     case SET_USER_ID:
       return { ...state, user: { ...state.user, id: action.payload } };
     default:
